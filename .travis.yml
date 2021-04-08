@@ -20,6 +20,7 @@ addons:
 script:
   - cppcheck --version
   - ./travis_cppcheck.sh
+  - echo 'ALL FILES CHECKED'
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
