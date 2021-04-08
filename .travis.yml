@@ -1,0 +1,27 @@
+
+language: cpp
+os:
+  - linux
+complier:
+  - gcc
+  - clang
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-trusty
+      - llvm-toolchain-precise
+
+    packages:
+      - cppcheck
+      - make
+      - cmake
+      - clang-format
+script:
+  - gcc main.c -o demo
+  - cppcheck --error-exitcode=1 main.c
+  - cppcheck --version
+  - clang-format -i main.c
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
