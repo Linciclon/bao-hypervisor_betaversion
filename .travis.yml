@@ -18,10 +18,9 @@ addons:
       - cmake
       - clang-format
 script:
-  - gcc main.c -o demo
-  - cppcheck --error-exitcode=1 main.c
+  - cd ./configs/example/
+  - cppcheck --error-exitcode=1 *.c
   - cppcheck --version
-  - clang-format -i main.c
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
