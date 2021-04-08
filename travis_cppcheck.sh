@@ -2,30 +2,30 @@
 
 export BASEDIR=$(pwd)
 
-export DIR_CONFIGS = $BASEDIR/configs
-export DIR_SRC     = $BASEDIR/src
+export DIR_CONFIGS=$BASEDIR/configs
+export DIR_SRC=$BASEDIR/src
 
-export DIR_ARCH    = $DIR_SRC/arch
-export DIR_CORE    = $DIR_SRC/core
-export DIR_LIB     = $DIR_SRC/lib
-export DIR_PLAT    = $DIR_SRC/platform
+export DIR_ARCH=$DIR_SRC/arch
+export DIR_CORE=$DIR_SRC/core
+export DIR_LIB=$DIR_SRC/lib
+export DIR_PLAT=$DIR_SRC/platform
 
-export DIR_ARCH_ARM   = $DIR_ARCH/armv8
-export DIR_ARCH_RISCV = $DIR_ARCH/riscv
+export DIR_ARCH_ARM=$DIR_ARCH/armv8
+export DIR_ARCH_RISCV=$DIR_ARCH/riscv
 
-export DIR_CORE_INC = $DIR_CORE/inc
-export DIR_LIB_INC  = $DIR_LIB/inc
+export DIR_CORE_INC=$DIR_CORE/inc
+export DIR_LIB_INC=$DIR_LIB/inc
 
-export DIR_PLAT_DRIVERS = $DIR_PLAT/drivers 
-export DIR_PLAT_HIKEY   = $DIR_PLAT/hikey960
-export DIR_PLAT_IMX     = $DIR_PLAT/imx8qm
-export DIR_PLAT_QEMU_ARM64   = $DIR_PLAT/qemu-aarch64-virt
-export DIR_PLAT_QEMU_RISCV   = $DIR_PLAT/qemu-riscv64-virt
-export DIR_PLAT_RPI4    = $DIR_PLAT/rpi4
-export DIR_PLAT_TX2     = $DIR_PLAT/tx2
-export DIR_PLAT_ULTRA   = $DIR_PLAT/ultra96
-export DIR_PLAT_ZCU102  = $DIR_PLAT/zcu102
-export DIR_PLAT_ZCU104  = $DIR_PLAT/zcu104
+export DIR_PLAT_DRIVERS=$DIR_PLAT/drivers 
+export DIR_PLAT_HIKEY=$DIR_PLAT/hikey960
+export DIR_PLAT_IMX=$DIR_PLAT/imx8qm
+export DIR_PLAT_QEMU_ARM64=$DIR_PLAT/qemu-aarch64-virt
+export DIR_PLAT_QEMU_RISCV=$DIR_PLAT/qemu-riscv64-virt
+export DIR_PLAT_RPI4=$DIR_PLAT/rpi4
+export DIR_PLAT_TX2=$DIR_PLAT/tx2
+export DIR_PLAT_ULTRA=$DIR_PLAT/ultra96
+export DIR_PLAT_ZCU102=$DIR_PLAT/zcu102
+export DIR_PLAT_ZCU104=$DIR_PLAT/zcu104
 
 cd $DIR_SRC
 shopt -s nullglob dotglob     # To CHECK IF THERE IS ANY FILE IN SRC DIR
