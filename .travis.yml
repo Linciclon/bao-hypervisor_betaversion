@@ -19,8 +19,8 @@ addons:
       - clang-format
 script:
   - cd ./configs/example/
-  - cppcheck --error-exitcode=1 *.c
   - cppcheck --version
+  - ./travis_cppcheck.sh
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
