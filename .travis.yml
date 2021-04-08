@@ -18,7 +18,6 @@ addons:
       - cmake
       - clang-format
 script:
-  - cd ./configs/example/
   - cppcheck --version
   - ./travis_cppcheck.sh
 
