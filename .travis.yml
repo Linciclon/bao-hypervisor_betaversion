@@ -4,7 +4,7 @@ os:
   - linux
 complier:
   - gcc
-  - clang
+  - clang-10
 addons:
   apt:
     sources:
