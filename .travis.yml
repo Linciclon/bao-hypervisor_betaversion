@@ -21,6 +21,7 @@ script:
   - cppcheck --version
   - ./travis_cppcheck.sh
   - echo 'ALL FILES CHECKED'
+  - clang-format --version
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
