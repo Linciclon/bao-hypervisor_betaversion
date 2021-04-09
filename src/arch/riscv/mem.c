@@ -12,61 +12,50 @@
  * license. See the COPYING file in the top-level directory for details.
  *
  */
-
-#include <mem.h>
-
-#include <platform.h>
 #include <cpu.h>
-
-static inline void as_map_physical_identity(addr_space_t *as) {
+#include <mem.h>
+#include <platform.h>
+static inline void as_map_physical_identity(addr_space_t* as) {
     const int lvl = 0;
-    size_t lvl_size = pt_lvlsize(&as->pt, lvl);
+    size_t    lvl_size = pt_lvlsize(&as->pt, lvl);
     uintptr_t lvl_mask = ~(lvl_size - 1);
-    pte_t *pt = as->pt.root;
-
+    pte_t*    pt = as->pt.root;
     /**
      *  Create identity mapping of existing physical memory regions using
      * the largest pages possible pte (in riscv this is always at level 0
      * pt).
      */
-
-    for (int i = 0; i < platform.region_num; i++) {
-        struct mem_region *reg = &platform.regions[i];
-        uintptr_t base = reg->base & lvl_mask;
-        uintptr_t top = (reg->base + reg->size) & lvl_mask;
-        int num_entries = ((top - base - 1) / lvl_size) + 1;
-
-        uintptr_t addr = base;
-        for (int j = 0; j < num_entries; j++) {
+    for(int i = 0; i < platform.region_num; i++) {
+        struct mem_region* reg = &platform.regions[i];
+        uintptr_t          base = reg->base & lvl_mask;
+        uintptr_t          top = (reg->base + reg->size) & lvl_mask;
+        int                num_entries = ((top - base - 1) / lvl_size) + 1;
+        uintptr_t          addr = base;
+        for(int j = 0; j < num_entries; j++) {
             int index = PTE_INDEX(lvl, addr);
             pte_set(&pt[index], addr, PTE_SUPERPAGE, PTE_HYP_FLAGS);
             addr += lvl_size;
         }
     }
 }
-
-void as_arch_init(addr_space_t *as) {
-
+void as_arch_init(addr_space_t* as) {
     if(as->type == AS_HYP) {
         as_map_physical_identity(as);
     }
-
 }
-
-bool mem_translate(addr_space_t *as, void *va, uint64_t *pa)
-{
+bool mem_translate(addr_space_t* as, void* va, uint64_t* pa) {
     pte_t* pte = &(as->pt.root[PTE_INDEX(0, (uintptr_t)va)]);
     size_t lvl = 0;
-    for (int i = 0; i < as->pt.dscr->lvls; i++) {
-        if (!pte_valid(pte) || !pte_table(&as->pt, pte, i)) {
+    for(int i = 0; i < as->pt.dscr->lvls; i++) {
+        if(!pte_valid(pte) || !pte_table(&as->pt, pte, i)) {
             lvl = i;
-            break;  
+            break;
         }
         pte = (pte_t*)pte_addr(pte);
         int index = PTE_INDEX(i + 1, (uintptr_t)va);
         pte = &pte[index];
     }
-    if (pte && pte_valid(pte)) {
+    if(pte && pte_valid(pte)) {
         *pa = pte_addr(pte);
         uint64_t mask = (1ULL << as->pt.dscr->lvl_off[lvl]) - 1;
         *pa = (*pa & ~mask) | ((uint64_t)va & mask);

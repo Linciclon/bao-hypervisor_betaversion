@@ -12,9 +12,5 @@
  * license. See the COPYING file in the top-level directory for details.
  *
  */
-
 #include <config.h>
-
-void config_arch_adjust_to_va(struct config *config, uint64_t phys)
-{
-}
+void config_arch_adjust_to_va(struct config* config, uint64_t phys) {}

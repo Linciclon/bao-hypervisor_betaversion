@@ -12,18 +12,14 @@
  * license. See the COPYING file in the top-level directory for details.
  *
  */
-
 #include <cache.h>
 #include <platform.h>
-
 /**
  * The riscv spec does not include cache maintenance. There are current
  * efforts to define and standardize a set of cache management instructions,
  * but for now this is platform dependent.
  */
-
-void cache_arch_enumerate(cache_t* dscrp)
-{
+void cache_arch_enumerate(cache_t* dscrp) {
     /**
      * Currently the typical of way for system software to discover cache
      * topology is to read it of a dtb passed by the bootloader. As we are not
@@ -32,9 +28,7 @@ void cache_arch_enumerate(cache_t* dscrp)
      */
     *dscrp = platform.cache;
 }
-
-__attribute__((weak)) void cache_flush_range(void* base, uint64_t size)
-{
+__attribute__((weak)) void cache_flush_range(void* base, uint64_t size) {
     /**
      * A platform must define its custom cache flush operation, otherwise
      * certain mechanisms such as coloring and hypervisor relocation will

@@ -12,12 +12,9 @@
  * license. See the COPYING file in the top-level directory for details.
  *
  */
-
 #include <config.h>
-
-void config_arch_adjust_to_va(struct config *config, uint64_t phys)
-{
-    for (int i = 0; i < config->vmlist_size; i++) {
-	    adjust_ptr(config->vmlist[i].platform.arch.smmu.smmu_groups, config);
+void config_arch_adjust_to_va(struct config* config, uint64_t phys) {
+    for(int i = 0; i < config->vmlist_size; i++) {
+        adjust_ptr(config->vmlist[i].platform.arch.smmu.smmu_groups, config);
     }
 }
