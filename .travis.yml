@@ -16,8 +16,8 @@ addons:
       - cppcheck
       - make
       - cmake
+      - clang-format-12
 script:
-  - sudo apt-get install clang-format;
   - cppcheck --version
   - ./travis_cppcheck.sh
   - echo 'ALL FILES CHECKED'
