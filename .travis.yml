@@ -16,12 +16,13 @@ addons:
       - cppcheck
       - make
       - cmake
-      - clang-format-12
+      - clang-format-11
 script:
   - cppcheck --version
+  - clang-format --version
   - ./travis_cppcheck.sh
   - echo 'ALL FILES CHECKED'
-  - clang-format --version
+
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
