@@ -34,9 +34,6 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -48,14 +45,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_ARCH_ARM/inc/arch/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -68,14 +59,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_ARCH_RISCV/inc/arch/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -87,14 +72,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_CORE/inc/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -106,14 +85,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_LIB/inc/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -128,14 +101,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_DRIVERS/8250_uart/inc/drivers/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -147,14 +114,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_DRIVERS/nxp_uart/inc/drivers/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -166,14 +127,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_DRIVERS/pl011_uart/inc/drivers/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -185,14 +140,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_DRIVERS/sbi_uart/inc/drivers/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -205,14 +154,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_DRIVERS/zynq_uart/inc/drivers/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -226,14 +169,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_HIKEY/inc/plat/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -245,14 +182,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_IMX/inc/plat/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -264,14 +195,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_QEMU_ARM64/inc/plat/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -283,14 +208,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_QEMU_RISCV/inc/plat/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -302,14 +221,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_QEMU_RISCV/inc/plat/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -321,14 +234,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_RPI4/inc/plat/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -341,14 +248,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_TX2/inc/plat/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -360,14 +261,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_ULTRA/inc/plat/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -379,14 +274,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_ZCU102/inc/plat/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
@@ -398,14 +287,8 @@ if [ ${#files[@]} -gt 0 ]
 then 
   echo "files:"
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
   cd $DIR_PLAT_ZCU104/inc/plat/
   cppcheck --error-exitcode=1 *.c
-  cp $BASEDIR/.clang-format $(pwd)
-  clang-format -i *.c 
-  rm .clang-format
 else
   echo "THERE IS NO FILES IN THIS DIR" 
 fi
