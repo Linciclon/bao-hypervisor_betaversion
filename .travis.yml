@@ -16,7 +16,7 @@ addons:
       - cppcheck
       - make
       - cmake
-      - clang-format-11
+      - clang-format-10
 script:
   - cppcheck --version
   - clang-format --version
